@@ -5,8 +5,9 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:Franco damian    
+apellido:Luzzi  
+Tutor: Natali
 ---
 Ejercicio: entrada_salida_07
 ---
@@ -50,15 +51,41 @@ class App(customtkinter.CTk):
 
     def btn_sumar_on_click(self):
         pass
+        operador_a= self.txt_operador_a.get()
+        operador_b= self.txt_operador_b.get()
+        operador_a_entero= int(operador_a)
+        operador_b_entero= int(operador_b) 
+        resultado= operador_a_entero + operador_b_entero
+        alert(title="Resultado", message=resultado)
 
     def btn_restar_on_click(self):
         pass
+        operador_a= self.txt_operador_a.get()
+        operador_b= self.txt_operador_b.get()
+        operador_a2_entero= int(operador_a)
+        operador_b2_entero= int(operador_b) 
+        resultado2= operador_a2_entero + operador_b2_entero
+        alert(title="Resultado", message=resultado2)
+
 
     def btn_multiplicar_on_click(self):
         pass
+        operador_a= self.txt_operador_a.get()
+        operador_b= self.txt_operador_b.get()
+        operador_a3_entero= int(operador_a)
+        operador_b3_entero= int(operador_b) 
+        resultado3= operador_a3_entero * operador_b3_entero
+        alert(title="Resultado", message= resultado3)
 
     def btn_dividir_on_click(self):
         pass
+        operador_a= self.txt_operador_a.get()
+        operador_b= self.txt_operador_b.get()
+        operador_a4_entero= int(operador_a)
+        operador_b4_entero= int(operador_b) 
+        resultado4= operador_a4_entero / operador_b4_entero
+        alert(title="Resultado", message=resultado4)
+
         
 if __name__ == "__main__":
     app = App()

@@ -5,8 +5,9 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:franco damian 
+apellido:luzzi
+Tutor: Natali
 ---
 Ejercicio: entrada_salida_08
 ---
@@ -41,6 +42,16 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         pass
+        operador_a=self.txt_operador_a.get()
+        operador_b=self.txt_operador_b.get()
+        operador_a_entero=int(operador_a)
+        operador_b_entero=int(operador_b)
+        resultadofinal=operador_a_entero / operador_b_entero
+        mensaje="El resto de dividir {0} por {1} es:".format(operador_a_entero, operador_b_entero)
+        alert(title="resultado", message= mensaje + str(resultadofinal))
+        
+        #revisar como hacer el restante y lo que queda. Tenia que agregar el STR para convertir el resultado final en una cadena de texto para poder concatenar todo.
+
         
         
     

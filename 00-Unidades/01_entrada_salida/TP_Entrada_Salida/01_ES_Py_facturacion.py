@@ -5,8 +5,9 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:Franco damian    
+apellido:Luzzi
+Tutor: Natali
 ---
 TP: ES_Facturaciones
 ---
@@ -53,12 +54,55 @@ class App(customtkinter.CTk):
 
     def btn_total_on_click(self):
         pass
+        importesuma=self.txt_importe_1.get()
+        importesuma1=self.txt_importe_2.get()
+        importesuma2= self.txt_importe_3.get()
+
+        importesumaentero=int(importesuma)
+        importesuma1entero=int(importesuma1)
+        importesuma2entero=int(importesuma2)
+
+        final=importesumaentero + importesuma1entero + importesuma2entero
+        mensaje="El resultado de su suma es de {0}".format(final)
+        alert(title="Resultado de su suma", message=mensaje )
+
 
     def btn_promedio_on_click(self):
         pass
+        importesumapromedio=self.txt_importe_1.get()
+        importesuma1promedio=self.txt_importe_2.get()
+        importesuma2promedio= self.txt_importe_3.get()
+
+        importepromedio=int(importesumapromedio)
+        importepromedio1=int(importesuma1promedio)
+        importepromedio2=int(importesuma2promedio)
+
+        primerresultado=importepromedio + importepromedio1 + importepromedio2
+        promediofinal=primerresultado / 3
+
+        mensajefinalpromedio= "Su promedio en productos es de {0}".format(promediofinal)
+        alert(title="Su promedio es", message=mensajefinalpromedio)
+
 
     def btn_total_iva_on_click(self):
         pass      
+        impor=self.txt_importe_1.get()
+        impor1=self.txt_importe_2 .get()
+        impor2=self.txt_importe_3 .get()
+
+        imporentero=int(impor)
+        impor1entero=int(impor1)
+        impor2entero=int(impor2)
+
+        sumatotal= imporentero + impor1entero + impor2entero
+
+        iva= 0.21
+        incremento=sumatotal * iva
+
+        msjfinal="Su incremento del 21% quedaria en un total de: {0} ".format(incremento)
+
+        alert(title="IVA", message=msjfinal)
+
     
 if __name__ == "__main__":
     app = App()
