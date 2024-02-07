@@ -46,7 +46,7 @@ class App(customtkinter.CTk):
         operador_b=self.txt_operador_b.get()
         operador_a_entero=int(operador_a)
         operador_b_entero=int(operador_b)
-        resultadofinal=operador_a_entero / operador_b_entero
+        resultadofinal=operador_a_entero % operador_b_entero
         mensaje="El resto de dividir {0} por {1} es:".format(operador_a_entero, operador_b_entero)
         alert(title="resultado", message= mensaje + str(resultadofinal))
         
