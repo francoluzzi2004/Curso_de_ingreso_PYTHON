@@ -44,9 +44,9 @@ class App(customtkinter.CTk):
         pass
         nombre =self.txt_nombre.get()
         edad  =self.txt_edad.get()    
-        mensaje="Usted se llama {0} y usted tiene {1} años".format(nombre, edad)
+        mensaje="Usted se llama {0} y tiene {1} años".format(nombre, edad)
         alert(title="Resultados", message=mensaje)
-
+        
         
     
 if __name__ == "__main__":
