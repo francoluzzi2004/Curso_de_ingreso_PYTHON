@@ -44,21 +44,15 @@ class App(customtkinter.CTk):
         sueldo=self.txt_sueldo.get()
         incremento=self.txt_incremento.get()
 
-        sueldoentero=int(sueldo)
-        incrementoentero=int(incremento)
+        sueldoentero=float(sueldo)
+        
+        incrementoentero=float(incremento)
 
-        incrementosueldo= int(0.15)
+        incremento=sueldoentero * incrementoentero /100
 
-        sueldosincremento=sueldoentero + incrementoentero
-        numerobase= incrementosueldo / sueldoentero
-        numerofinal=sueldoentero * 100
+        final=incremento + sueldoentero
 
-        alert(title="Resultado", message=numerofinal)
-
-            #REVISAR EN LA PARTE PORCENTUAL
-
-
-
+        alert(title="Resultado", message=final)
 
 
         
