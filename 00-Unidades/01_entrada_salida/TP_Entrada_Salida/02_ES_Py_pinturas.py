@@ -52,16 +52,31 @@ class App(customtkinter.CTk):
     def btn_convertir_c_f_on_click(self):
 
         temperaturatextcenti=self.txt_temperatura_c.get()
-        temperaturatextfaren=self.txt_temperatura_f.get()
 
-        centigrados=int(temperaturatextcenti)
-        faren=int(temperaturatextfaren)
-
+        centigradosint=int(temperaturatextcenti)
         
+
+        suma=32.0
+        multiplicacion1= 1.8
+        multiplicacion= centigradosint * multiplicacion1
+        final= multiplicacion + suma
+
+        alert(title="Resultado", message="Su conversion a farenheit quedaira en: " + str(final))
+
 
     def btn_convertir_f_c_on_click(self):
         pass
-    
+
+        Fahrenheit=self.txt_temperatura_f.get()
+
+        farenentero=int(Fahrenheit)
+
+        numeroderesta= 32
+        Resta= farenentero - numeroderesta
+        division= 1.8
+        calculofinal= Resta / division
+
+        alert(title="Resultado", message="Su conversion a centigrados quedaria en: " + str(calculofinal))
     
 if __name__ == "__main__":
     app = App()
