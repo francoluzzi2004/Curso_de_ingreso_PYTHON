@@ -48,9 +48,11 @@ class App(customtkinter.CTk):
         importeentero = int(importexto)
         descuentoentero = int(descuentexto)
         
-        final=importeentero - descuentoentero
+        final=importeentero * descuentoentero / 100
 
-        alert(title="Resultado", message=final)
+        finalnumero=importeentero - final
+
+        alert(title="Resultado", message=finalnumero)
 
 
 
