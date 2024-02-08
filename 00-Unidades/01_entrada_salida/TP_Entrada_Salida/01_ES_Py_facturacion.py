@@ -98,8 +98,9 @@ class App(customtkinter.CTk):
 
         iva= 0.21
         incremento=sumatotal * iva
+        preciofinal=sumatotal + incremento
 
-        msjfinal="Su incremento del 21% quedaria en un total de: {0} ".format(incremento)
+        msjfinal="Su total con un incremento del 21% quedaria en: {0} ".format(preciofinal)
 
         alert(title="IVA", message=msjfinal)
 
