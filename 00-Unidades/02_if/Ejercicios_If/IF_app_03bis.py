@@ -5,8 +5,9 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:franco damian
+apellido:luzzi
+Tutor:Natali
 ---
 Ejercicio: if_03bis
 ---
@@ -34,6 +35,14 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         pass
+        altura=self.txt_edad.get()
+        alturafl=float(altura)
+
+        if alturafl > 1.80:
+            alert(title="Resultado", message="Usted puede ser pivot")
+            pass
+        else:
+            alert(title="Resultado", message="Usted no puede ser pivot")
 
 
 if __name__ == "__main__":

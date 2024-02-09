@@ -33,9 +33,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        edadtxt=self.txt_edad.get()
+        edadint=int(edadtxt)
 
-         
+        if edadint == 18:
+            alert("Resultado", "Usted tiene 18 años")
+
+        
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
