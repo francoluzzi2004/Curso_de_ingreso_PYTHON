@@ -28,6 +28,8 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         pass
+        numeroaleatorio= random.randint(1, 10)
+        alert(title="Resultado", message= "Su numero seleccionado es: " + str(numeroaleatorio))
         
 
 if __name__ == "__main__":

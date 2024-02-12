@@ -40,6 +40,22 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         pass
+        alturatext= self.txt_altura.get()
+        alturaint= int(alturatext)
+
+        if alturaint <= 200:
+            mensaje = "Ala-Pívot o Pívot"
+            
+        elif alturaint >= 180 and alturaint <= 199:
+            mensaje ="Alero"
+            
+        elif alturaint >= 160 and alturaint <= 179:
+            mensaje ="Escolta"
+            
+        else:
+            mensaje ="Base"
+
+            alert(title="resultado", message=mensaje)
 
         
         
