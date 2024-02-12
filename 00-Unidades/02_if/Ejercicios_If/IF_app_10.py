@@ -34,16 +34,17 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         notaaleatoria= random.randint(1, 10)
 
-        if notaaleatoria >= 6 and => 10:
+        if notaaleatoria >= 6 and notaaleatoria <= 10:
             mensaje= "Promocion directa, la nota es: "
         
-        elif notaaleatoria 4 or 5:
+        elif notaaleatoria == 4 or notaaleatoria == 5:
             mensaje= "Aprobado, la nota es: "
 
         else:
             mensaje="Desaprobado, la nota es: "
+            
 
-            alert(title="Resultado de su examen", message= mensaje + str(notaaleatoria))
+        alert(title="Resultado de su examen", message= mensaje + str(notaaleatoria))
             
 
 if __name__ == "__main__":
