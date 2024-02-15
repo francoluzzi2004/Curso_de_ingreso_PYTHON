@@ -60,25 +60,25 @@ class App(customtkinter.CTk):
 
         elif (cantidadint == 4 and combobocmarca == "ArgentinaLuz"):
             total= cantidadint * 800 * 0.75
-        
+
         elif (cantidadint == 4 and combobocmarca == "FelipeLamparas"):
                 total= cantidadint * 800 * 0.75
-        
+
         elif (cantidadint == 4):
             total= cantidadint * 800 * 0.8
 
         elif (cantidadint == 3 and combobocmarca == "ArgentinaLuz"):
             total= cantidadint * 800 * 0.85
-        
+
         elif (cantidadint == 3 and combobocmarca == "FelipeLamparas"):
             total= cantidadint * 800 * 0.9
 
         elif (cantidadint == 3):
             total= cantidadint * 800 * 0.95
-        
+
         else:
             total= (cantidadint * 800)
-        
+            
         if(cantidadint >= 4000):
             total=cantidadint * 0.95
         

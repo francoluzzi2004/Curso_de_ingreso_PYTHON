@@ -6,8 +6,9 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre:franco damian
+apellido:luzzi
+Tutro:natali
 ---
 Ejercicio: Match_09
 ---
@@ -25,7 +26,7 @@ en función de la estación del año y del destino elegido:
     Si es Primavera u Otoño:
         Bariloche tiene un aumento del 10%
         Cataratas tiene un aumento del 10%
-        Mar del plata tiene un aumento del 10%
+        "Mar del plata" tiene un aumento del 10%
         Córdoba tiene precio sin descuento
 
 '''
@@ -57,8 +58,40 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        estaciones=self.combobox_estaciones.get()
+        destino=self.combobox_destino.get()
+        total=15000
+        match (estaciones):
+            case "Invierno":
+                match (destino):
+                    case "Bariloche" :
+                        total=15000 * 1.2
+                    case "Cataratas" | "Cordoba":
+                        total=15000 * 0.9
+                    case "Mar del plata":
+                        total= 15000 * 0.8
+            case "Verano":
+                match (destino):
+                    case "Bariloche":
+                        total=15000 * 0.8
+                    case "Cataratas" | "Cordoba":
+                        total=15000 * 1.1
+                    case "Mar del plata":
+                        total=15000 * 1.2
+            case "Otoño" | "Primavera":
+                match (destino):
+                    case "Bariloche" | "Cataratas" | "Mar del plata":
+                        total=15000 * 1.1
+                    case "Cordoba":
+                        total=15000
             
+        alert(title="Resutlado de sus vacaciones", message=total)       
+
+                    
+        
+
+                
+    
     
 if __name__ == "__main__":
     app = App()

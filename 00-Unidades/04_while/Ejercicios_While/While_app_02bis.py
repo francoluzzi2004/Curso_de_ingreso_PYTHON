@@ -29,7 +29,14 @@ class App(customtkinter.CTk):
         
     
     def btn_mostrar_iteracion_on_click(self):
-        pass
+        numeroinicial=1
+        suma_pares= 0
+        
+        while numeroinicial <= 10:
+            if numeroinicial % 2 == 0:
+                suma_pares += numeroinicial
+            numeroinicial += 1
+        alert(title="Resultado", message=suma_pares)
     
     
 if __name__ == "__main__":
