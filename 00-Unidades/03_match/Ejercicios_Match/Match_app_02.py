@@ -7,8 +7,9 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre:franco damian
+apellido:luzzi
+Tutor: Natali
 ---
 Ejercicio: Match_02
 ---

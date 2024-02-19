@@ -41,9 +41,8 @@ class App(customtkinter.CTk):
 
         self.label2 = customtkinter.CTkLabel(master=self, text="Estado")
         self.label2.grid(row=2, column=0, padx=20, pady=10)
-        self.combobox_tipo = customtkinter.CTkComboBox(
-            master=self, values=["Soltero/a", "Casado/a", "Divorciado/a", "Viudo/a"])
-        self.combobox_tipo.grid(row=2, column=1, padx=20, pady=10)
+        self.txt_tipo = customtkinter.CTkEntry(master=self)
+        self.txt_tipo.grid(row=2, column=1, padx=20, pady=10)
 
         self.label3 = customtkinter.CTkLabel(master=self, text="Legajo")
         self.label3.grid(row=3, column=0, padx=20, pady=10)
@@ -55,7 +54,42 @@ class App(customtkinter.CTk):
         self.btn_validar.grid(row=4, pady=20, columnspan=2, sticky="nsew")
 
     def btn_validar_on_click(self):
-        pass
+        apellido=prompt("Rising BTL", "Ingrese su apellido")
+        edadstring=prompt("Rising BTL", "Ingrese su edad")
+        edad=int(edadstring)
+        tipo=prompt("Rising BTL", "Ingrese su estado civil")
+        legajostring=prompt("Rising BTL", "Ingese su numero de legajo")
+        legajo=int(legajostring)
+        
+        while apellido.isdigit():
+            apellido=prompt("Error Rising", "Ingrese su apellido nuevamente")
+            if apellido is None:
+                break
+            while edadstring.isalpha() or (edad >= 18 and edad <= 90):
+                if edad is None:
+                    break
+            while tipo !="soltero" !="soltera" !="casado" !="casada" !="divorciado" !="divorciada"  !="viudo" !="viuda":
+                tipo=prompt("ERROR Rising", "reingrese su estado civil")
+                if tipo is None:
+                    break
+            while legajostring.isalpha() or (legajo > 0):
+                if legajostring is None:
+                    break
+
+        self.txt_apellido.delete(0, tkinter.END)
+        self.txt_apellido.insert(0, apellido)
+        self.txt_edad.delete(0, tkinter.END)
+        self.txt_edad.insert(0, edad)
+        self.txt_tipo.delete(0, tkinter.END)
+        self.txt_tipo.insert(tipo)
+        self.txt_legajo.delete(0, tkinter.END)
+        self.txt_legajo.insert(0, legajo)
+        alert("Resultado de su inscripcion","Informacion recompilada")
+
+            
+
+            
+            
 
 
 if __name__ == "__main__":
