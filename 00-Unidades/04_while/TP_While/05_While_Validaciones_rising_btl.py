@@ -5,8 +5,9 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:franco damian
+apellido:luzzi
+Tutor:Natali
 ---
 TP: While_validaciones_rising_btl
 ---
@@ -54,42 +55,7 @@ class App(customtkinter.CTk):
         self.btn_validar.grid(row=4, pady=20, columnspan=2, sticky="nsew")
 
     def btn_validar_on_click(self):
-        apellido=prompt("Rising BTL", "Ingrese su apellido")
-        edadstring=prompt("Rising BTL", "Ingrese su edad")
-        edad=int(edadstring)
-        tipo=prompt("Rising BTL", "Ingrese su estado civil")
-        legajostring=prompt("Rising BTL", "Ingese su numero de legajo")
-        legajo=int(legajostring)
         
-        while apellido.isdigit():
-            apellido=prompt("Error Rising", "Ingrese su apellido nuevamente")
-            if apellido is None:
-                break
-            while edadstring.isalpha() or (edad >= 18 and edad <= 90):
-                if edad is None:
-                    break
-            while tipo !="soltero" !="soltera" !="casado" !="casada" !="divorciado" !="divorciada"  !="viudo" !="viuda":
-                tipo=prompt("ERROR Rising", "reingrese su estado civil")
-                if tipo is None:
-                    break
-            while legajostring.isalpha() or (legajo > 0):
-                if legajostring is None:
-                    break
-
-        self.txt_apellido.delete(0, tkinter.END)
-        self.txt_apellido.insert(0, apellido)
-        self.txt_edad.delete(0, tkinter.END)
-        self.txt_edad.insert(0, edad)
-        self.txt_tipo.delete(0, tkinter.END)
-        self.txt_tipo.insert(tipo)
-        self.txt_legajo.delete(0, tkinter.END)
-        self.txt_legajo.insert(0, legajo)
-        alert("Resultado de su inscripcion","Informacion recompilada")
-
-            
-
-            
-            
 
 
 if __name__ == "__main__":

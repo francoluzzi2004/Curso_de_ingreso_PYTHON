@@ -52,13 +52,11 @@ class App(customtkinter.CTk):
                 maximo = numero
             elif numero < minimo:
                 minimo = numero
-            
-            if numero is None:
+                
+            if numero == None:
                 break
 
             acumulador += numero
-            
-
             self.txt_maximo.delete(0, tkinter.END)
             self.txt_maximo.insert(0, maximo)
             self.txt_minimo.delete(0, tkinter.END)

@@ -46,11 +46,11 @@ class App(customtkinter.CTk):
             contador += 1
 
         promedio= acumulador / 5
-        self.txt_suma_acumulada.delete(0,"end" )
+        self.txt_suma_acumulada.delete(0,tkinter.END )
         self.txt_suma_acumulada.insert(0, acumulador)
-        self.txt_promedio.delete(0, "end")
+        self.txt_promedio.delete(0, tkinter.END)
         self.txt_promedio.insert(0, acumulador)
-    #agregarles a delete los end
+    
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
